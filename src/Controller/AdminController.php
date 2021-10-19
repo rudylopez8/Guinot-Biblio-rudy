@@ -68,10 +68,9 @@ class AdminController extends AbstractController
      /**
      * @Route("/Logout", name="Logout")
      */
-    public function Logout(): Response
+    public function Logout()
     {
-        return $this->render('admin/Logout.html.twig', [        
-        ]);
+        return $this->redirectToRoute("Accueil");
     } 
      /**
      * @Route("/Utilisateurs", name="Utilisateurs")
@@ -80,7 +79,6 @@ class AdminController extends AbstractController
     {
         return $this->render('admin/Utilisateurs.html.twig', [        
         ]);
-    } 
-
-
+    }
+     
 }
